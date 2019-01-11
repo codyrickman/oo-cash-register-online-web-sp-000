@@ -9,12 +9,12 @@ class CashRegister
     @total
   end
   def add_item(title, price, quantity = 1)
-    @items << [title, price, quantity]
+    quantity.times {@items << [title]}
     @total += price * quantity
   end
   def apply_discount
     if (@discount == 0)
-      puts "There is no discount to apply."
+      return "There is no discount to apply."
     else
       @total = @total.to_f - (@total.to_f * (@discount.to_f / 100.0))
       return "After the discount, the total comes to $#{@total.to_i}."
