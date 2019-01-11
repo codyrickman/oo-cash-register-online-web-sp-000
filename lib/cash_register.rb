@@ -8,8 +8,8 @@ class CashRegister
   def total
     @total
   end
-  def add_item(title, price, quatity = 1)
-    @items << [title, price, quatity]
+  def add_item(title, price, quantity = 1)
+    @items << [title, price, quantity]
     @total += price
   end
 end
