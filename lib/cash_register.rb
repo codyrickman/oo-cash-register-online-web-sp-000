@@ -16,7 +16,7 @@ class CashRegister
     if (@discount == 0)
       puts "There is no discount to apply."
     else
-      @total = @total - (@total * discount)
+      @total = @total * (100 - (100 * discount))
       puts "After the discount, the total comes to $#{@total}."
     end
   end
