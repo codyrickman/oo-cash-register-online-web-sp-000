@@ -17,7 +17,7 @@ class CashRegister
       puts "There is no discount to apply."
     else
       @total = @total.to_f - (@total.to_f * (@discount.to_f / 100.0))
-      puts "After the discount, the total comes to $#{@total}."
+      puts "After the discount, the total comes to $#{@total.to_i}."
     end
   end
 end
